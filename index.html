@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home / X</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white selection:bg-blue-500 selection:text-white antialiased text-[15px] overflow-x-hidden">
+
+    <!-- Wrapper: Center-aligned on desktop, edge-to-edge on mobile -->
+    <div class="w-full flex justify-center mx-auto max-w-[1280px] min-h-screen">
+      
+      <!-- ================= 1. LEFT SIDEBAR ================= -->
+      <!-- Mobile (<640px): HIDDEN -->
+      <!-- Tablet (640px-1279px): Icon-only (w-16 / w-20) -->
+      <!-- Large Desktop (>=1280px): Full sidebar with text labels -->
+      <aside class="hidden sm:flex sm:w-16 md:w-20 xl:w-64 sticky top-0 h-screen flex-col justify-between px-2 xl:px-4 py-2 border-r border-zinc-800 shrink-0 select-none z-30">
+        <div class="flex flex-col items-center xl:items-start w-full overflow-y-auto no-scrollbar">
+          
+          <!-- Logo -->
+          <div class="logo invert p-2.5 my-1 hover:bg-zinc-900 rounded-full w-fit cursor-pointer transition">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </svg>
+          </div>
+
+          <!-- Nav Items (Tight paddings so nothing cuts off vertically) -->
+          <ul class="flex flex-col space-y-0.5 w-full items-center xl:items-start mt-1">
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit font-bold transition">
+              <span class="material-symbols-outlined text-[24px]">home</span>
+              <span class="hidden xl:inline text-[17px]">Home</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">search</span>
+              <span class="hidden xl:inline text-[17px]">Explore</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">notifications</span>
+              <span class="hidden xl:inline text-[17px]">Notifications</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">chat</span>
+              <span class="hidden xl:inline text-[17px]">Grok</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">view_list</span>
+              <span class="hidden xl:inline text-[17px]">Lists</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">bookmark</span>
+              <span class="hidden xl:inline text-[17px]">Bookmarks</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">group</span>
+              <span class="hidden xl:inline text-[17px]">Communities</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+              <span class="hidden xl:inline text-[17px]">Premium</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">person</span>
+              <span class="hidden xl:inline text-[17px]">Profile</span>
+            </li>
+            <li class="flex items-center gap-4 px-3 py-2 hover:bg-zinc-900 rounded-full cursor-pointer w-fit transition">
+              <span class="material-symbols-outlined text-[24px]">more_horiz</span>
+              <span class="hidden xl:inline text-[17px]">More</span>
+            </li>
+            
+            <!-- Post Button -->
+            <li class="pt-2 w-full flex justify-center xl:justify-start">
+              <button class="xl:hidden bg-blue-500 hover:bg-blue-600 text-white p-2.5 rounded-full shadow-md flex items-center justify-center transition">
+                <span class="material-symbols-outlined text-xl">edit</span>
+              </button>
+              <button class="hidden xl:block w-[92%] text-white bg-blue-500 hover:bg-blue-600 font-bold py-2.5 rounded-full text-base transition shadow-md">
+                Post
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- User profile bottom widget (Sticky at bottom, fits laptop screens) -->
+        <div class="my-2 flex items-center gap-2.5 p-2 hover:bg-zinc-900 rounded-full cursor-pointer w-full justify-center xl:justify-between transition shrink-0">
+          <div class="flex items-center gap-2.5">
+            <img src="./batman.png" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80'" alt="Batman" class="w-9 h-9 rounded-full object-cover shrink-0" />
+            <div class="hidden xl:flex flex-col text-xs leading-tight">
+              <span class="font-bold text-[14px]">Batman</span>
+              <span class="text-zinc-500">@darkknight</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined hidden xl:block text-zinc-500 text-lg">more_horiz</span>
+        </div>
+      </aside>
+
+      <!-- ================= 2. CENTER FEED ================= -->
+      <!-- Mobile: 100% full width (w-full) -->
+      <!-- Desktop: strictly capped at max-w-[600px] to preserve Twitter layout -->
+      <main class="w-full sm:max-w-[600px] flex-grow sm:border-r border-zinc-800 min-h-screen pb-20 sm:pb-6">
+        
+        <!-- Sticky Top Bar -->
+        <div class="top flex px-3 h-12 relative items-center border-b border-zinc-800 backdrop-blur-md bg-black/80 sticky top-0 z-20">
+          <!-- Mobile Profile Avatar (Only visible on small phones) -->
+          <div class="sm:hidden mr-3 shrink-0">
+            <img src="./batman.png" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80'" alt="Batman" class="w-7 h-7 rounded-full object-cover" />
+          </div>
+
+          <div class="relative flex-1 h-full flex items-center justify-center cursor-pointer hover:bg-zinc-900/40 transition font-bold text-sm">
+            <span>For You</span>
+            <div class="absolute w-12 h-1 rounded-full bg-blue-500 bottom-0"></div>
+          </div>
+
+          <div class="flex-1 h-full flex items-center justify-center cursor-pointer hover:bg-zinc-900/40 transition font-bold text-sm text-zinc-500">
+            <span>Following</span>
+          </div>
+
+          <div class="settings ml-2 cursor-pointer p-1.5 hover:bg-zinc-900 rounded-full shrink-0">
+            <span class="material-symbols-outlined text-lg text-zinc-400">settings</span>
+          </div>
+        </div>
+
+        <!-- Tweet Compose Box -->
+        <div class="whatshapp flex gap-3 p-3.5 border-b border-zinc-800">
+          <div class="img shrink-0">
+            <img src="./batman.png" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80'" alt="Batman Profile" class="w-9 h-9 rounded-full object-cover" />
+          </div>
+          <div class="w-full">
+            <input placeholder="What is happening?!" class="w-full h-8 text-[16px] bg-black outline-none text-white placeholder-zinc-500" type="text" />
+            <div class="text-blue-400 flex items-center gap-1 font-bold text-xs my-2 cursor-pointer">
+              <span class="material-symbols-outlined text-sm">globe_asia</span>
+              <span>Everyone can reply</span>
+            </div>
+            <div class="w-full h-[1px] my-2 bg-zinc-800"></div>
+            <div class="blue-icons flex text-blue-400 justify-between items-center pt-0.5">
+              <div class="flex gap-1.5 sm:gap-2.5">
+                <span class="material-symbols-outlined text-[19px] cursor-pointer hover:bg-blue-500/10 rounded-full p-1 transition">image</span>
+                <span class="material-symbols-outlined text-[19px] cursor-pointer hover:bg-blue-500/10 rounded-full p-1 transition">gif_box</span>
+                <span class="material-symbols-outlined text-[19px] cursor-pointer hover:bg-blue-500/10 rounded-full p-1 transition">ballot</span>
+                <span class="material-symbols-outlined text-[19px] cursor-pointer hover:bg-blue-500/10 rounded-full p-1 transition">sentiment_satisfied</span>
+                <span class="material-symbols-outlined text-[19px] cursor-pointer hover:bg-blue-500/10 rounded-full p-1 transition">location_on</span>
+              </div>
+              <button class="bg-blue-500 hover:bg-blue-600 px-3.5 py-1 rounded-full text-white font-bold text-xs shrink-0 shadow">
+                Post
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feed Posts -->
+        <div class="posts divide-y divide-zinc-800">
+          <!-- Post 1 -->
+          <article class="post flex p-3.5 gap-3 hover:bg-white/[0.02] cursor-pointer transition">
+            <div class="image shrink-0">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Sarah Profile" class="w-9 h-9 rounded-full object-cover" />
+            </div>
+            <div class="content w-full pr-1 overflow-hidden">
+              <div class="flex items-center gap-1.5 text-[13px] flex-wrap">
+                <span class="font-bold hover:underline cursor-pointer text-white">Sarah Jenkins</span>
+                <span class="text-zinc-500">@sarahcodes · 2h</span>
+              </div>
+              <div class="text-white text-[14px] my-1 leading-normal break-words">
+                Shipped the dark mode update today! 🚀 Tailwind makes prototyping custom component themes effortless.
+              </div>
+              <div class="postimg my-2 rounded-2xl overflow-hidden border border-zinc-800/80">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&auto=format&fit=crop&q=80" alt="Code on screen" class="w-full h-auto object-cover max-h-[300px]" />
+              </div>
+              <div class="icons text-zinc-500 flex items-center justify-between text-xs max-w-sm pt-1">
+                <div class="flex items-center gap-1.5 hover:text-blue-400">
+                  <span class="material-symbols-outlined text-[17px]">chat_bubble</span> 248
+                </div>
+                <div class="flex items-center gap-1.5 hover:text-green-400">
+                  <span class="material-symbols-outlined text-[17px]">repeat</span> 89
+                </div>
+                <div class="flex items-center gap-1.5 hover:text-pink-500">
+                  <span class="material-symbols-outlined text-[17px]">favorite</span> 1.4k
+                </div>
+                <div class="flex items-center gap-1.5 hover:text-blue-400">
+                  <span class="material-symbols-outlined text-[17px]">bar_chart</span> 42k
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="post flex p-3.5 gap-3 hover:bg-white/[0.02] cursor-pointer transition">
+            <div class="image shrink-0">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Cricket Profile" class="w-9 h-9 rounded-full object-cover" />
+            </div>
+            <div class="content w-full pr-1 overflow-hidden">
+              <div class="flex items-center gap-1.5 text-[13px] flex-wrap">
+                <span class="font-bold hover:underline cursor-pointer text-white">Cricket Central</span>
+                <span class="text-zinc-500">@cricketlive · 4h</span>
+              </div>
+              <div class="text-white text-[14px] my-1 leading-normal break-words">
+                What an innings under pressure! The cover drive timing tonight was absolute poetry in motion. 🏏🔥
+              </div>
+              <div class="postimg my-2 rounded-2xl overflow-hidden border border-zinc-800/80">
+                <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=900&auto=format&fit=crop&q=80" alt="Cricket ball" class="w-full h-auto object-cover max-h-[300px]" />
+              </div>
+              <div class="icons text-zinc-500 flex items-center justify-between text-xs max-w-sm pt-1">
+                <div class="flex items-center gap-1.5 hover:text-blue-400">
+                  <span class="material-symbols-outlined text-[17px]">chat_bubble</span> 1.8k
+                </div>
+                <div class="flex items-center gap-1.5 hover:text-green-400">
+                  <span class="material-symbols-outlined text-[17px]">repeat</span> 3.2k
+                </div>
+                <div class="flex items-center gap-1.5 hover:text-pink-500">
+                  <span class="material-symbols-outlined text-[17px]">favorite</span> 18.5k
+                </div>
+                <div class="flex items-center gap-1.5 hover:text-blue-400">
+                  <span class="material-symbols-outlined text-[17px]">bar_chart</span> 190k
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+
+      <!-- ================= 3. RIGHT SIDEBAR ================= -->
+      <!-- Only visible on large screens (lg: >=1024px) -->
+      <aside class="hidden lg:block w-[290px] xl:w-[340px] pl-5 pr-2 sticky top-0 h-screen overflow-y-auto shrink-0 text-sm">
+        <div class="search my-1.5 sticky top-0 bg-black pt-1 pb-2 z-10">
+          <input
+            type="text"
+            class="w-full px-3.5 py-2 bg-[#16181c] rounded-full text-white text-xs outline-none border border-transparent focus:border-blue-500 transition"
+            placeholder="Search"
+          />
+        </div>
+
+        <div class="whats my-2 bg-[#16181c] w-full py-2.5 rounded-2xl border border-zinc-800/40">
+          <h2 class="text-base font-extrabold px-3.5 mb-1.5">What's happening</h2>
+
+          <div class="item px-3.5 py-2 hover:bg-zinc-800/50 cursor-pointer transition">
+            <div class="text-[11px] text-zinc-500">Trending in India</div>
+            <div class="font-bold text-xs">#ViratKohli</div>
+            <div class="text-[11px] text-zinc-500">40.2k Posts</div>
+          </div>
+
+          <div class="item px-3.5 py-2 hover:bg-zinc-800/50 cursor-pointer transition">
+            <div class="text-[11px] text-zinc-500">Trending in India</div>
+            <div class="font-bold text-xs">#RohitSharma</div>
+            <div class="text-[11px] text-zinc-500">37.9k Posts</div>
+          </div>
+
+          <div class="item px-3.5 py-2 hover:bg-zinc-800/50 cursor-pointer transition">
+            <div class="text-[11px] text-zinc-500">Trending in India</div>
+            <div class="font-bold text-xs">#TailwindCSS</div>
+            <div class="text-[11px] text-zinc-500">125k Posts</div>
+          </div>
+        </div>
+
+        <div class="whats my-2 bg-[#16181c] w-full py-2.5 rounded-2xl border border-zinc-800/40">
+          <h2 class="text-base font-extrabold px-3.5 mb-1.5">Who to follow</h2>
+          <div class="item font-bold text-xs px-3.5 py-2 hover:bg-zinc-800/50 cursor-pointer flex justify-between items-center transition">
+            <span>Narendra Modi</span>
+            <button class="bg-white text-black px-3 py-1 text-[11px] rounded-full font-bold hover:bg-gray-200">Follow</button>
+          </div>
+          <div class="item font-bold text-xs px-3.5 py-2 hover:bg-zinc-800/50 cursor-pointer flex justify-between items-center transition">
+            <span>Virat Kohli</span>
+            <button class="bg-white text-black px-3 py-1 text-[11px] rounded-full font-bold hover:bg-gray-200">Follow</button>
+          </div>
+          <div class="text-blue-500 text-xs px-3.5 pt-1.5 cursor-pointer hover:underline">
+            Show more
+          </div>
+        </div>
+      </aside>
+
+      <!-- ================= 4. MOBILE FLOATING ACTION BUTTON ================= -->
+      <button class="sm:hidden fixed bottom-16 right-4 bg-blue-500 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center z-40 active:scale-95 transition">
+        <span class="material-symbols-outlined text-2xl">edit</span>
+      </button>
+
+      <!-- ================= 5. MOBILE BOTTOM NAVIGATION ================= -->
+      <nav class="sm:hidden fixed bottom-0 left-0 w-full bg-black/95 backdrop-blur-md border-t border-zinc-800 flex justify-around items-center py-2.5 z-40">
+        <span class="material-symbols-outlined text-2xl cursor-pointer">home</span>
+        <span class="material-symbols-outlined text-2xl cursor-pointer text-zinc-400">search</span>
+        <span class="material-symbols-outlined text-2xl cursor-pointer text-zinc-400">notifications</span>
+        <span class="material-symbols-outlined text-2xl cursor-pointer text-zinc-400">mail</span>
+      </nav>
+
+    </div>
+  </body>
+</html>
